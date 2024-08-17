@@ -52,9 +52,7 @@ class MBPP(Task):
         """
         description = doc["text"]
         test_example = doc["test_list"][0]
-        prompt = f'"""\nTask Description:\n\n
-        {description}\n{test_example}\n"""\n
-        Code:\n\n'
+        prompt = f'"""\nTask Description:\n\n{description}\n{test_example}\n"""\nCode:\n\n'
         return prompt
 
     def get_reference(self, doc):
